@@ -1,0 +1,341 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0; 
+    padding: 0;
+}
+
+body { 
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.texto-naranja {
+    font-weight: 300;
+    color: orange;
+}
+
+.texto-blanco {
+    font-weight: 700;
+    color: #fff;
+}
+
+.texto-negro {color: #000;}
+
+
+/*Nav y full pages*/
+#fp-nav ul li a span{ /*Con esto cambiamos el color de los circulo*/
+    background: orange;
+}
+
+#fp-nav ul li .fp-tooltip{ /*Con esto cambiamos el color de los circulo*/
+    color: orange;
+}
+
+.fp-slidesNav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#fp-nav ul li .fp-slidesNav {
+    color: red;
+}
+
+.nav{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 70;
+    width: 100%;
+    margin: 0;
+    padding: 10px 20px
+}
+
+.nav li, .nav a{
+    display: inline-block;
+    margin: 10px;
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    color: #c2c2c2;
+    transition: .5s ease;
+}
+
+.nav li.active{border-bottom: 2px solid orange;}
+
+.menu li.active a{color: orange;} /*Color orange cuando está activada la clase .active*/
+
+.menu li:hover a{color: white;}
+
+
+/*Header*/
+.header{
+    background-image: url(../media/bg-imagen.jpeg);
+    background-position: center;
+}
+
+.header .contenedor-titulo {
+    text-align: center;
+    position: relative;
+    z-index: 99;
+}
+
+.header .titulo {
+    font-size: 70px;
+    text-transform: uppercase;
+}
+
+.header .contenedor-icono {
+    position: absolute;
+    z-index: 99;
+    bottom: 3%;
+    left: 50%;
+    font-size: 40px;
+    animation: down-up 1s ease infinite;
+}
+
+.bg-video {
+    position: absolute;
+    z-index: 1;
+    right: 0;top: 0;
+    width: 100%; height: 100%;
+    background-size: 100%;
+    background: black;
+    background-position: center;
+    background-size: contain;
+    object-fit: cover;
+}
+
+
+/*Productos*/
+.productos article{
+    background-position: center;
+    background-size: cover;
+   
+}
+
+.productos article:nth-child(1){ /*Primer articulo dentro de productos*/
+    background-image: url(../media/p-1.jpg);
+}
+
+.productos article:nth-child(2){ 
+    background-image: url(../media/p-2.jpg);
+}
+
+.productos article:nth-child(3){ 
+    background-image: url(../media/p-3.jpg);
+}
+
+.productos article:nth-child(4){ 
+    background-image: url(../media/p-4.jpg);
+}
+.productos article:nth-child(5){ 
+    background-image: url(../media/p-5.jpg);
+}
+
+.productos article:nth-child(6){ 
+    background-image: url(../media/p-6.jpg);
+}
+
+/*Cambiando estilos dependiendo de la página*/
+
+.productos article:nth-child(1) span:nth-child(2){
+    color: #f2f2f2;
+}
+
+.productos article:nth-child(2) span:nth-child(2){
+    color: rgb(255, 255, 255);
+}
+
+.productos article:nth-child(6) .texto-negro, .precio{ 
+    color: white;
+}
+
+.productos .informacion-producto{margin: 0 30px}
+
+.productos .informacion-producto::before{
+    content: "";
+    height: 60px;
+    width: 2px;
+    background: orange;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    margin: -10px
+}
+
+.productos .modelo{font-size: 40px;}
+
+.productos .descripcion{font-size: 22px;}
+
+.productos .precio{font-size: 22px;}
+
+
+/*Modificando el slide (flechas) de fullpage*/
+
+.fp-controlArrow.fp-next, .fp-controlArrow.fp-prev{
+    top: 95%;
+}
+
+.fp-controlArrow.fp-prev{
+    border-width: 20px 20px 20px 0;
+    border-color: transparent black transparent transparent;
+}
+
+.fp-controlArrow.fp-next{
+    border-width: 20px 0px 20px 20px;
+    border-color: transparent transparent transparent black;
+}
+
+
+/*Footer*/
+
+.footer .texto-naranja{
+    font-size: 60px;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+}
+
+.footer h2{
+    opacity: 0;
+    font-family: 'Oswald', sans-serif;
+    transition: .3s ease all;
+}
+
+.footer .redes-sociales{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 ;
+    font-size: 50px;
+}
+
+.footer .redes-sociales a{
+    display: flex;
+    width: 100px;
+    height: 100px;
+    background: white;
+    color: #30313a;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    margin: 0 20px;
+    text-decoration: none;
+}
+
+.footer .fb i{color: #3b5998;}
+
+.footer .tw i{color: #1da1f2;}
+
+.footer .ig i{color: #c13584;}
+
+.footer .fb:hover {
+    background: #3b5998;
+    transition-duration: .3s;
+}
+
+.footer .tw:hover{
+    background: #1da1f2;
+    transition-duration: .3s;
+}
+
+.footer .ig:hover {
+    background: #c13584;
+    transition-duration: .3s;
+}
+
+.footer .fb:hover  i{
+color: white;}
+
+.footer .tw:hover  i{
+color: white;}
+
+.footer .ig:hover i {
+color: white;}
+
+.cp .titulo-final {
+    display: flex;
+    justify-content: center;
+}
+
+
+h3{
+    font-family: 'Open Sans';
+    font-size: 12px;
+    color: #f2f2f2;
+}
+
+
+@keyframes down-up{
+    0%{ transform: translateY(20px);}
+    25%{ transform: translateY(0px);}
+    100%{ transform: translateY(20px);}
+}
+
+/*Mediaqueries*/
+@media screen and (max-width: 500px){
+    .nav .marca{
+        display: none;
+    }
+
+    .nav{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer .redes-sociales a{
+        display: flex;
+        width: 80px;
+        height: 80px;
+        background: white;
+        color: #30313a;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100px;
+        margin: 0 20px;
+        text-decoration: none;
+    }
+
+    .footer .texto-naranja{
+        font-size: 50px;
+        letter-spacing: 1px;
+        margin-bottom: 40px;
+    }
+    .productos .informacion-producto{
+        background-color: rgba(0,0,0,.6);
+        margin-right: 40px;
+        padding: 2px;
+    }
+
+
+    .productos article:nth-child(3) span:nth-child(2){
+        color: orange;
+    }
+
+    .productos article:nth-child(4) span:nth-child(2){
+        color: orange;
+    }
+
+    .productos article:nth-child(6) .texto-negro, .descripcion{ 
+        color: white;
+    }
+
+    .productos .informacion-producto::before{
+        content: "";
+        height: 2px;
+        width: 100%;
+        background: orange;
+        display: inline-block;
+        position: absolute;
+        top: 64%;
+        margin: -30px;
+    }
+
+}
